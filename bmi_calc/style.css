@@ -1,0 +1,146 @@
+:root{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --accent:#4b7bec;
+  --muted:#6b7280;
+  --success:#10b981;
+  --warning:#f59e0b;
+  --danger:#ef4444;
+  --radius:12px;
+  --pad:16px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  height:100%;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#eef2ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+  color:#111827;
+}
+
+.container{
+  width:100%;
+  max-width:520px;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:0 6px 30px rgba(16,24,40,.08);
+}
+
+h1{
+  margin:0 0 12px;
+  font-size:1.6rem;
+}
+
+.row{
+  margin-bottom:14px;
+}
+
+label{
+  display:block;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+.input-group{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.input-group input{
+  flex:1;
+  padding:10px 12px;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  font-size:1rem;
+}
+
+.input-group select{
+  padding:10px;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  background:white;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+
+button{
+  padding:10px 14px;
+  border-radius:10px;
+  border:0;
+  font-weight:600;
+  cursor:pointer;
+}
+
+#calculate{
+  background:var(--accent);
+  color:white;
+}
+
+#reset{
+  background:#eef2ff;
+  color:var(--accent);
+}
+
+#result{
+  margin-top:18px;
+  padding:14px;
+  border-radius:10px;
+  background:#fbfbff;
+  border:1px solid #f0f4ff;
+}
+
+#result h2{
+  margin:0 0 10px;
+  font-size:1.05rem;
+}
+
+#bmi-value,
+#bmi-category,
+#bmi-info,
+#bmi-range,
+#bmi-recommend{
+  margin:6px 0;
+  color:#374151;
+}
+
+.recommend-strong{
+  font-weight:700;
+}
+
+.note{
+  color:var(--muted);
+  font-size:.85rem;
+  margin-top:6px;
+}
+
+footer{
+  margin-top:16px;
+  color:var(--muted);
+  font-size:.8rem;
+}
+
+@media (max-width:440px){
+  .container{
+    padding:16px;
+  }
+  .input-group input{
+    padding:9px;
+  }
+}

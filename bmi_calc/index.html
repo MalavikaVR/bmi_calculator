@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <h1>BMI Calculator</h1>
+
+    <form id="bmi-form" autocomplete="off" novalidate>
+      <div class="row">
+        <label for="weight">Weight</label>
+        <div class="input-group">
+          <input id="weight" name="weight" type="number" min="1" step="any" placeholder="e.g. 60" required />
+          <select id="weight-unit" aria-label="Weight unit">
+            <option value="kg" selected>kg</option>
+            <option value="lb">lb</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="height">Height</label>
+        <div class="input-group">
+          <input id="height" name="height" type="number" min="0.1" step="any" placeholder="e.g. 1.65" required />
+          <select id="height-unit" aria-label="Height unit">
+            <option value="m" selected>m</option>
+            <option value="cm">cm</option>
+            <option value="in">in</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" id="calculate">Calculate BMI</button>
+        <button type="reset" id="reset">Reset</button>
+      </div>
+    </form>
+
+    <section id="result" aria-live="polite" hidden>
+      <h2>Your results</h2>
+
+      <p id="bmi-value">
+        <strong>BMI:</strong> <span>—</span>
+      </p>
+
+      <p id="bmi-category">
+        <strong>Category:</strong> <span>—</span>
+      </p>
+
+      <p id="bmi-info"></p>
+
+      <!-- NEW: healthy weight recommendation -->
+      <p id="recommended-weight" style="margin-top:6px;">
+        <!-- will be filled by JavaScript -->
+      </p>
+    </section>
+
+    <footer>
+      <small>Formula: <code>BMI = weight(kg) ÷ height(m)²</code></small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
